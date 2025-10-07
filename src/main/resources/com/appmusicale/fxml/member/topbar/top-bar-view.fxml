@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import java.net.URL?>
+
+<!-- VISTA BARRA SUPERIORE (logo, nomeutente, cerca, inserisci-->
+
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.appmusicale.controller.member.topbar.TopBarController"
+      alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="20.0" styleClass="top-bar"
+      BorderPane.alignment="CENTER_LEFT">
+
+    <stylesheets>
+        <URL value="@../../../css/style.css"/>
+    </stylesheets>
+
+    <padding>
+        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0"/>
+    </padding>
+    <ImageView fx:id="logoImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true"/>
+    <Label fx:id="userNameLabel" styleClass="user-name-label" />
+    <Region prefHeight="200.0" prefWidth="90.0" HBox.hgrow="NEVER"/>
+    <TextField fx:id="searchField" onAction="#handleSearch" prefWidth="400.0" promptText="Cosa vuoi ascoltare?" styleClass="search-bar"/>
+    <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS"/>
+    <MenuButton mnemonicParsing="false" styleClass="add-button" text="Carica">
+        <items>
+            <MenuItem mnemonicParsing="false" text="Brano" onAction="#uploadTrack"/>
+            <MenuItem mnemonicParsing="false" text="Concerto" onAction="#uploadConcert"/>
+        </items>
+    </MenuButton>
+</HBox>

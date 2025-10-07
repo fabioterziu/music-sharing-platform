@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<!-- ESECUTORI -->
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.appmusicale.controller.member.homebar.PerformersController"
+      VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS"
+      fx:id="contentContainer"> <!-- NEW -->
+
+    <stylesheets>
+        <URL value="@../../../css/style.css" />
+    </stylesheets>
+
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS"
+                style="-fx-background: white; -fx-background-color: transparent;">
+
+        <!-- Griglia per performer -->
+        <GridPane fx:id="performersGrid" hgap="20" vgap="20"
+                  style="-fx-padding: 20; -fx-background-color: white;">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="20" />
+                <ColumnConstraints percentWidth="20" />
+                <ColumnConstraints percentWidth="20" />
+                <ColumnConstraints percentWidth="20" />
+                <ColumnConstraints percentWidth="20" />
+            </columnConstraints>
+        </GridPane>
+    </ScrollPane>
+
+</VBox>

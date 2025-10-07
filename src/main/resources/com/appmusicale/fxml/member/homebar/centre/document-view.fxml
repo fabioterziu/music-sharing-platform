@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- MOSTRA PDF -->
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.appmusicale.controller.member.homebar.centre.DocumentController">
+
+    <center>
+        <ScrollPane fx:id="pdfScrollPane"
+                    fitToWidth="true"
+                    hbarPolicy="NEVER"
+                    vbarPolicy="AS_NEEDED"
+                    prefViewportWidth="800"
+                    prefViewportHeight="600"
+                    style="-fx-focus-color: transparent; -fx-faint-focus-color: transparent;">
+            <content>
+                <VBox fx:id="pdfContainer"
+                      spacing="10"
+                      alignment="CENTER"/>
+            </content>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

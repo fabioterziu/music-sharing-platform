@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<!-- TRACCIA DEL CONCERTO -->
+
+<ScrollPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.appmusicale.controller.member.sidebar.ConcertTrackController"
+            style="-fx-background: white; -fx-padding: 0;" fitToWidth="true">
+
+    <stylesheets>
+        <URL value="@../../../css/style.css" />
+    </stylesheets>
+
+    <VBox spacing="20" style="-fx-padding: 20;-fx-background-color: white;">
+        <!-- Intestazione -->
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button text="← Torna al concerto" onAction="#handleBack" styleClass="primary-button"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="TOP_LEFT" HBox.hgrow="ALWAYS">
+            <!-- Informazioni traccia (a sinistra) larghezza fissa -->
+            <VBox spacing="15" minWidth="600" prefWidth="600" maxWidth="600">
+                <!-- Informazioni base -->
+                <GridPane hgap="10" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints prefWidth="200" />
+                        <ColumnConstraints prefWidth="370" />
+                    </columnConstraints>
+
+                    <Label text="Titolo:" style="-fx-font-weight: bold;" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                    <Label fx:id="trackTitleLabel" style="-fx-font-size: 20px;"
+                           GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <Label text="Artista:" style="-fx-font-weight: bold;" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                    <Label fx:id="artistLabel" style="-fx-font-size: 20px;"
+                           GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                    <Label text="Ora inizio:" style="-fx-font-weight: bold;" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                    <Label fx:id="startTimeLabel" style="-fx-font-size: 20px;"
+                           GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                    <Label text="Ora fine:" style="-fx-font-weight: bold;" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                    <Label fx:id="endTimeLabel" style="-fx-font-size: 20px;"
+                           GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+                    <Label text="Esecutori:" style="-fx-font-weight: bold;" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                    <HBox spacing="5" GridPane.rowIndex="4" GridPane.columnIndex="1" alignment="CENTER_LEFT">
+                        <Label fx:id="performersLabel" style="-fx-font-size: 20px;"/>
+                        <Button fx:id="editPerformersBtn" text="Modifica"
+                                styleClass="secondary-button"
+                                onAction="#handleEditPerformers" />
+                    </HBox>
+
+                    <Label text="Strumenti:" style="-fx-font-weight: bold;" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+                    <HBox spacing="5" GridPane.rowIndex="5" GridPane.columnIndex="1" alignment="CENTER_LEFT">
+                        <Label fx:id="instrumentsLabel" style="-fx-font-size: 20px;"/>
+                        <Button fx:id="editInstrumentsBtn" text="Modifica"
+                                styleClass="secondary-button"
+                                onAction="#handleEditInstruments" />
+                    </HBox>
+
+                    <Label text="Data:" style="-fx-font-weight: bold;" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+                    <HBox spacing="5" GridPane.rowIndex="6" GridPane.columnIndex="1" alignment="CENTER_LEFT">
+                        <Label fx:id="dateLabel" style="-fx-font-size: 20px;"/>
+                        <Button fx:id="editDateBtn" text="Modifica"
+                                styleClass="secondary-button"
+                                onAction="#handleEditDate" />
+                    </HBox>
+
+                    <Label text="Luogo:" style="-fx-font-weight: bold;" GridPane.rowIndex="7" GridPane.columnIndex="0" />
+                    <HBox spacing="5" GridPane.rowIndex="7" GridPane.columnIndex="1" alignment="CENTER_LEFT">
+                        <Label fx:id="placeLabel" style="-fx-font-size: 20px;"/>
+                        <Button fx:id="editPlaceBtn" text="Modifica"
+                                styleClass="secondary-button"
+                                onAction="#handleEditPlace" />
+                    </HBox>
+                </GridPane>
+
+                <!-- Form modifica -->
+                <VBox fx:id="editForm" spacing="10" style="-fx-padding: 10; -fx-background-color: #f0f0f0; -fx-background-radius: 5;"
+                      visible="false" managed="false">
+                    <Label fx:id="editFormTitle" style="-fx-font-weight: bold;" />
+                    <TextField fx:id="editField" prefWidth="300" />
+                    <HBox spacing="10">
+                        <Button text="Salva" onAction="#handleSaveEdit" styleClass="red-secondary-button" />
+                        <Button text="Annulla" onAction="#handleCancelEdit" styleClass="secondary-button" />
+                        <Label fx:id="formMessageLabel" text="" style="-fx-text-fill: #d9534f; -fx-font-size: 14px; -fx-wrap-text: true; -fx-max-width: 300;" HBox.hgrow="ALWAYS" />
+                    </HBox>
+                </VBox>
+            </VBox>
+
+            <!-- Note (a destra) si espande per occupare lo spazio rimanente -->
+            <VBox spacing="10" HBox.hgrow="ALWAYS">
+                <Label text="Note" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+                <!-- Campo per nuova nota -->
+                <HBox spacing="10" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                    <TextField fx:id="newNoteField" promptText="Aggiungi una nota" HBox.hgrow="ALWAYS"
+                               style="-fx-pref-height: 30;"/>
+                    <Button text="Invia" onAction="#handleAddNote" styleClass="primary-button"
+                            style="-fx-pref-height: 30; -fx-padding: 0 10;"/>
+                </HBox>
+
+                <!-- Lista note -->
+                <VBox fx:id="notesList" spacing="5" style="-fx-padding: 10 0;" VBox.vgrow="ALWAYS" />
+            </VBox>
+        </HBox>
+    </VBox>
+</ScrollPane>

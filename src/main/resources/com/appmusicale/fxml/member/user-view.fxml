@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<!-- VISTA RADICE USER -->
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.appmusicale.controller.member.UserController"
+            fx:id="mainContainer">
+
+    <stylesheets>
+        <URL value="@../../css/style.css" />
+    </stylesheets>
+
+    <!-- TOP BAR -->
+    <top>
+        <fx:include source="topbar/top-bar-view.fxml" fx:id="topBar" />
+    </top>
+
+    <!-- SIDE BAR -->
+    <left>
+        <fx:include source="sidebar/side-bar-view.fxml" fx:id="sideBar" />
+    </left>
+
+    <!-- BARRA HOME-->
+    <center>
+        <fx:include source="sidebar/home-view.fxml" fx:id="currentView" />
+    </center>
+
+</BorderPane>

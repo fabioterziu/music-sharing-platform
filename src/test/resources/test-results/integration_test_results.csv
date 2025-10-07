@@ -1,0 +1,4 @@
+test_name,component_flow,track_id,media_count,success,execution_time_ms,timestamp,error_message
+testIntegrationServiceBusinessLogic,TrackService→BusinessLogic→Validation,100,0,true,307,2025-09-19T18:58:24.537601,""
+testIntegrationOggettiRelazioni,Model→Relations→Integration,null,1,true,0,2025-09-19T18:58:24.54582,""
+testIntegrationWorkflowCompleto,CompleteWorkflow→Integration,100,1,true,0,2025-09-19T18:58:24.548886,""

@@ -1,0 +1,7 @@
+test_name,member_id,username,operation,old_status,new_status,success,timestamp
+testValidazioneRuoliMember,1,testuser,VALIDATE_ROLES,,ALL_ROLES_TESTED,true,2025-09-19T19:45:32.671438
+testValidazioneMembriPerStatus,1,testuser,VALIDATE_BY_STATUS,,ALL_STATUS_TESTED,true,2025-09-19T19:45:32.687887
+testRicercaMemberPerEmail,1,testuser,SEARCH_BY_EMAIL,,,true,2025-09-19T19:45:32.694517
+testAggiornamentoStatusMember,1,testuser,UPDATE_STATUS,PENDING,ACTIVE,true,2025-09-19T19:45:32.69853
+testRicercaMemberPerUsername,1,testuser,SEARCH_BY_USERNAME,,,true,2025-09-19T19:45:32.70044
+testInserimentoMember,1,testuser,INSERT,,PENDING,true,2025-09-19T19:45:32.705745

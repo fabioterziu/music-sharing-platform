@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+
+<!-- HOME COMPONENTE (esplora, autori, generi, esecutori) -->
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.appmusicale.controller.member.sidebar.HomeController"
+      VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+
+    <stylesheets>
+        <URL value="@../../../css/style.css" />
+    </stylesheets>
+
+    <!-- Spazio per la navigazione tra categorie -->
+    <HBox alignment="CENTER_LEFT" spacing="20"
+          style="-fx-padding: 20; -fx-background-color: #c3cad5;">
+        <Label fx:id="categotyLabel" text="Esplora" style="-fx-text-fill: #2c3e50; -fx-font-size: 24px; -fx-font-weight: bold;" />
+        <Region HBox.hgrow="ALWAYS" />
+        <HBox spacing="10">
+            <Button fx:id="exploreButton" onAction="#showExplore" text="Esplora" styleClass="category-button" />
+            <Button fx:id="authorsButton" onAction="#showAuthors" text="Autori" styleClass="category-button" />
+            <Button fx:id="genresButton" onAction="#showGenres" text="Generi" styleClass="category-button" />
+            <Button fx:id="performersButton" onAction="#showPerformers" text="Esecutori" styleClass="category-button" />
+        </HBox>
+    </HBox>
+
+    <!-- Container per il contenuto dinamico-->
+    <VBox fx:id="contentContainer" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+
+    </VBox>
+
+</VBox>

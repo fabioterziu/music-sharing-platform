@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<?import java.net.URL?>
+
+<!-- SCHERMATA ACCESSO/REGISTRAZIONE -->
+
+<StackPane xmlns="http://javafx.com/javafx/17.0.12"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.appmusicale.controller.access.AccessController"
+           style="-fx-background-color: #001220">
+
+    <stylesheets>
+        <URL value="@../../css/style.css" />
+    </stylesheets>
+
+
+    <VBox alignment="CENTER" prefHeight="500.0" prefWidth="450.0" maxHeight="500.0" maxWidth="450.0"
+          styleClass="card" style="-fx-background-color: #001933; -fx-border-color: #58BFC0; -fx-border-width: 2;" >
+
+        <!-- LOGO -->
+        <ImageView fx:id="logoImage" fitWidth="200" preserveRatio="true"  />
+
+
+
+        <!-- scena LOGIN -->
+        <VBox fx:id="loginPane" alignment="CENTER" spacing="15" style="-fx-padding: 0 30;" >
+            <Label text="Accedi" style="-fx-font-size: 24px; -fx-text-fill: #58BFC0; -fx-font-weight: bold;" /> <!-- titolo-->
+            <TextField fx:id="txtLoginUsername" promptText="Username" styleClass="search-bar" /> <!-- username -->
+            <PasswordField fx:id="txtLoginPassword" promptText="Password" styleClass="search-bar" /> <!-- password -->
+            <!-- Label per errori -->
+            <Label fx:id="errorLabelLogin"
+                   textFill="#800032"
+                   style="-fx-font-size: 14px;"
+                   visible="false"/>
+            <Button fx:id="btnHome" text="Accedi" styleClass="primary-button" onAction="#ACCEDI" /> <!-- bottone accedi -->
+
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="Non hai un account?" style="-fx-text-fill: #a0a0a0;" /> <!-- vai registrati  -->
+                <Hyperlink fx:id="hlSignin" text="Registrati" style="-fx-text-fill: #58BFC0; -fx-font-weight: bold; -fx-border-color: transparent;" onAction="#linkSignin" />
+            </HBox>
+        </VBox>
+
+
+        <!-- scena SIGNIN -->
+        <VBox fx:id="signinPane" alignment="CENTER" spacing="15" style="-fx-padding: 0 30;" >
+            <Label text="Registrati" style="-fx-font-size: 24px; -fx-text-fill: #58BFC0; -fx-font-weight: bold;" /> <!-- titolo-->
+            <TextField fx:id="txtSigninUsername" promptText="Username" styleClass="search-bar" /> <!-- username -->
+            <TextField fx:id="txtSigninEmail" promptText="Email" styleClass="search-bar" /> <!-- email -->
+            <PasswordField fx:id="txtSigninPassword" promptText="Password" styleClass="search-bar" /> <!-- password -->
+            <PasswordField fx:id="txtSigninRepPassword" promptText="Ripeti Password" styleClass="search-bar" /> <!-- rep password -->
+            <!-- Label per errori -->
+            <Label fx:id="errorLabelSignin"
+                   textFill="#800032"
+                   style="-fx-font-size: 14px;"
+                   visible="false"/>
+            <Button fx:id="btnSignin" text="Registrati" styleClass="primary-button" onAction="#REGISTRATI" /> <!-- bottone registrati -->
+
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="Hai già un account?" style="-fx-text-fill: #a0a0a0;" /> <!--vai accedi-->
+                <Hyperlink fx:id="hlLogin" text="Accedi" style="-fx-text-fill: #58BFC0; -fx-font-weight: bold; -fx-border-color: transparent;" onAction="#linkLogin" />
+            </HBox>
+        </VBox>
+
+
+        <!-- padding vbox -->
+        <padding>
+            <Insets bottom="30.0" left="20.0" right="20.0" top="30.0" />
+        </padding>
+
+        <VBox.margin>
+            <Insets top="20" />
+        </VBox.margin>
+
+    </VBox>
+
+</StackPane>

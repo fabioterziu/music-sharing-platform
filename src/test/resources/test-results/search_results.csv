@@ -1,0 +1,4 @@
+test_name,search_query,search_type,results_count,execution_time_ms,success,timestamp
+testLogicaRicercaPerTitolo,Bohemian Rhapsody,BY_TITLE,1,1,true,2025-09-20T08:59:08.006367
+testRicercaTrackPerAutore,1,BY_AUTHOR,1,0,true,2025-09-20T08:59:08.01675
+testRicercaTrackPerGenere,1,BY_GENRE,1,0,true,2025-09-20T08:59:08.01786

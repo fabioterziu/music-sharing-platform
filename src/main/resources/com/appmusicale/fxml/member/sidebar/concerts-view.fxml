@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<!-- CONCERTI COMPONENTE -->
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.appmusicale.controller.member.sidebar.ConcertsController"
+            VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS"
+            fx:id="contentContainer">
+
+    <stylesheets>
+        <URL value="@../../../css/style.css" />
+    </stylesheets>
+
+    <HBox alignment="CENTER_LEFT" spacing="20"
+          style="-fx-padding: 20; -fx-background-color: #c3cad5;">
+        <Label text="Concerti" style="-fx-text-fill: #2c3e50; -fx-font-size: 24px; -fx-font-weight: bold;" />
+        <Region HBox.hgrow="ALWAYS" />
+        <HBox spacing="10">
+            <Button text="fake" styleClass="category-button" visible="false" />
+            <Button text="fake" styleClass="category-button" visible="false"/>
+            <Button text="fake" styleClass="category-button" visible="false" />
+            <Button text="fake" styleClass="category-button" visible="false" />
+        </HBox>
+    </HBox>
+
+    <!-- Contenuto principale -->
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS"
+                style="-fx-background: white; -fx-background-color: transparent;">
+        <GridPane fx:id="concertsGrid" hgap="20" vgap="20"
+                  style="-fx-padding: 20; -fx-background-color: white;">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="33.33" />
+                <ColumnConstraints percentWidth="33.33" />
+                <ColumnConstraints percentWidth="33.33" />
+            </columnConstraints>
+        </GridPane>
+    </ScrollPane>
+
+</VBox>

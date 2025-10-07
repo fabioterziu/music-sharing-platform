@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<!-- COMPONENTE MIEI COMMENTI -->
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.appmusicale.controller.member.sidebar.CommentedController"
+      VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+
+    <stylesheets>
+        <URL value="@../../../css/style.css" />
+    </stylesheets>
+
+    <HBox alignment="CENTER_LEFT" spacing="20"
+          style="-fx-padding: 20; -fx-background-color: #c3cad5;">
+        <Label text="I miei commentati" style="-fx-text-fill: #2c3e50; -fx-font-size: 24px; -fx-font-weight: bold;" />
+        <Region HBox.hgrow="ALWAYS" />
+        <HBox spacing="10">
+            <Button text="fake" styleClass="category-button" visible="false" />
+            <Button text="fake" styleClass="category-button" visible="false"/>
+            <Button text="fake" styleClass="category-button" visible="false" />
+            <Button text="fake" styleClass="category-button" visible="false" />
+        </HBox>
+    </HBox>
+
+    <!-- Contenuto principale -->
+    <VBox spacing="10" VBox.vgrow="ALWAYS" fx:id="mainContent">
+        <!-- Intestazione colonne -->
+        <GridPane hgap="10" vgap="10" style="-fx-padding: 5; -fx-background-color: #E3E6EB; -fx-background-radius: 5;">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="30" />
+                <ColumnConstraints percentWidth="25" />
+                <ColumnConstraints percentWidth="15" />
+                <ColumnConstraints percentWidth="15" />
+                <ColumnConstraints percentWidth="15" halignment="CENTER"/>
+            </columnConstraints>
+
+            <Label text="Titolo" style="-fx-font-weight: bold; -fx-padding: 5;"
+                   GridPane.columnIndex="0"/>
+            <Label text="Artista" style="-fx-font-weight: bold; -fx-padding: 5;"
+                   GridPane.columnIndex="1"/>
+            <Label text="Anno" style="-fx-font-weight: bold; -fx-padding: 5;"
+                   GridPane.columnIndex="2"/>
+            <Label text="Genere" style="-fx-font-weight: bold; -fx-padding: 5;"
+                   GridPane.columnIndex="3"/>
+            <Label text="Visualizza" style="-fx-font-weight: bold; -fx-padding: 5;"
+                   GridPane.columnIndex="4"/>
+        </GridPane>
+
+        <!-- Lista brani -->
+        <GridPane fx:id="tracksGrid" hgap="10" vgap="10" style="-fx-padding: 5;" VBox.vgrow="ALWAYS">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="30" />
+                <ColumnConstraints percentWidth="25" />
+                <ColumnConstraints percentWidth="15" />
+                <ColumnConstraints percentWidth="15" />
+                <ColumnConstraints percentWidth="15" halignment="CENTER"/>
+            </columnConstraints>
+        </GridPane>
+    </VBox>
+
+</VBox>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!--VISTA PRIVATA ADMIN -->
+
+<SplitPane dividerPositions="0.5" orientation="VERTICAL" style="-fx-background-color: #f5f7fa;"
+           HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS"
+           xmlns="http://javafx.com/javafx/17.0.12"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.appmusicale.controller.member.sidebar.AdminController">
+
+    <stylesheets>
+        <URL value="@../../../css/style.css" />
+    </stylesheets>
+
+
+    <!-- Richieste di registrazione -->
+    <VBox spacing="10" style="-fx-padding: 20;" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+        <Label style="-fx-text-fill: #2c3e50; -fx-font-size: 18px; -fx-font-weight: bold;" text="Richieste di Registrazione" />
+        <ListView fx:id="pendingUsersList" style="-fx-background-color: white; -fx-background-radius: 5; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);">
+            <VBox.margin>
+                <Insets top="10" />
+            </VBox.margin>
+        </ListView>
+
+        <Label fx:id="noPendingRequestsLabel" style="-fx-text-fill: #7f8c8d; -fx-font-style: italic; -fx-padding: 20;" text="Nessuna richiesta di registrazione" visible="false" />
+    </VBox>
+
+    <!-- Utenti registrati -->
+    <VBox spacing="10" style="-fx-padding: 20;" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+        <Label style="-fx-text-fill: #2c3e50; -fx-font-size: 18px; -fx-font-weight: bold;" text="Utenti Registrati" />
+        <ListView fx:id="registeredUsersList" style="-fx-background-color: white; -fx-background-radius: 5;-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);">
+            <VBox.margin>
+                <Insets top="10" />
+            </VBox.margin>
+        </ListView>
+
+        <Label fx:id="noUsersLabel" style="-fx-text-fill: #7f8c8d; -fx-font-style: italic; -fx-padding: 20;" text="Nessun utente registrato" visible="false" />
+
+
+        <Region VBox.vgrow="ALWAYS" />
+
+    </VBox>
+
+</SplitPane>

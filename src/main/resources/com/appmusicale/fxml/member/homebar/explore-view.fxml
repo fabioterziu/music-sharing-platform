@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<!-- TRACCE RANDOM PER ESPLORA -->
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.appmusicale.controller.member.homebar.ExploreController"
+      VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS">
+
+    <stylesheets>
+        <URL value="@../../../css/style.css" />
+    </stylesheets>
+    <!-- scorribile -->
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" HBox.hgrow="ALWAYS"
+                style="-fx-background: white; -fx-background-color: transparent;">
+        <!-- costanti colonne e righe. griglia -->
+        <GridPane fx:id="exploreGrid" hgap="20" vgap="20"
+                  style="-fx-padding: 20; -fx-background-color: white;">
+            <!-- 5 colonne -->
+            <columnConstraints>
+                <!-- larghezza 20 percento -->
+                <ColumnConstraints percentWidth="20" />
+                <ColumnConstraints percentWidth="20" />
+                <ColumnConstraints percentWidth="20" />
+                <ColumnConstraints percentWidth="20" />
+                <ColumnConstraints percentWidth="20" />
+            </columnConstraints>
+            <!-- 4 righe -->
+            <!-- altezza 25percento -->
+            <rowConstraints>
+                <RowConstraints percentHeight="25" />
+                <RowConstraints percentHeight="25" />
+                <RowConstraints percentHeight="25" />
+                <RowConstraints percentHeight="25" />
+            </rowConstraints>
+
+        </GridPane>
+    </ScrollPane>
+</VBox>
