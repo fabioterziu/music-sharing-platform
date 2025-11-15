@@ -12,6 +12,12 @@ Gli admin hanno il pieno controllo sugli account utente e sulle loro attività.
 
 (Le password vengono hashate con SHA-256 prima di essere memorizzate nel database)
 
+<img width="1440" height="932" alt="Screenshot 2025-11-15 alle 13 02 33" src="https://github.com/user-attachments/assets/52f57a8e-59fd-471b-9331-198eaebcc33b" />
+<img width="1440" height="932" alt="Screenshot 2025-11-15 alle 13 16 21" src="https://github.com/user-attachments/assets/8da3f465-d448-4d41-92c9-cf07c9cb257c" />
+<img width="1440" height="932" alt="Screenshot 2025-11-15 alle 13 22 36" src="https://github.com/user-attachments/assets/4c1bdd56-7875-4261-9b6c-fed88d87291d" />
+
+
+
 
 ## TECNOLOGIE UTILIZZATE
 - linguaggio: JAVA
