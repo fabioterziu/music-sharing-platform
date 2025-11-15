@@ -14,6 +14,8 @@ Gli admin hanno il pieno controllo sugli account utente e sulle loro attività.
 
 <img width="1440" height="932" alt="Screenshot 2025-11-15 alle 13 02 33" src="https://github.com/user-attachments/assets/52f57a8e-59fd-471b-9331-198eaebcc33b" />
 <img width="1440" height="932" alt="Screenshot 2025-11-15 alle 13 16 21" src="https://github.com/user-attachments/assets/8da3f465-d448-4d41-92c9-cf07c9cb257c" />
+<img width="1440" height="932" alt="Screenshot 2025-11-15 alle 19 54 15" src="https://github.com/user-attachments/assets/1e86dd4e-92c7-4ba6-beb4-55b452384ddb" />
+<img width="1440" height="932" alt="Screenshot 2025-11-15 alle 13 23 41" src="https://github.com/user-attachments/assets/da2ee592-ae6f-4f71-a8d9-1ea6f2768574" />
 <img width="1440" height="932" alt="Screenshot 2025-11-15 alle 13 22 36" src="https://github.com/user-attachments/assets/4c1bdd56-7875-4261-9b6c-fed88d87291d" />
 
 
